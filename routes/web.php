@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,13 +9,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/cars', function () {
-    return view('cars.index');
-})->name('cars.index');
+// Car routes
+Route::resource('cars', CarController::class);
 
-Route::get('/customers', function () {
-    return view('customers.index');
-})->name('customers.index');
+// Customer routes
+Route::resource('customers', CustomerController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
