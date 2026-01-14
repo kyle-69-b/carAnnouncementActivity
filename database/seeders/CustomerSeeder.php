@@ -13,6 +13,17 @@ class CustomerSeeder extends Seeder
      */
     public function run(): void
     {
-        Customer::factory()->count(30)->create();
+        Customer::create([
+            'first_name' => 'Kyle',
+            'last_name' => 'Mendez',
+            'email' => 'knnm4240@gmail.com',
+            'phone' => '09488719334'
+        ]);
+        Customer::create([
+            'first_name' => 'Rege',
+            'last_name' => 'Pelesores',
+            'email' => 'pelesoresreggienino16@example.com',
+            'phone' => '09979409888'
+        ]);
     }
 }

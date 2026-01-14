@@ -26,9 +26,12 @@ class AnnouncementController extends Controller
             'message' => $data['message'],
             'date_sent' => now(),
         ]);
+            $customers = Customer::pluck('email');
 
-        // Send Email (Update with your actual email)
-        Mail::to('reggieninozafrapelesores@gmail.com')->send(new AnnouncementMail($data));
+            foreach ($customers as $email){
+                Mail::to($email)
+                ->send(new AnnouncementMail($announcement));
+            }
 
         return back()->with('success', 'Announcement sent and saved successfully!');
     }

@@ -36,6 +36,9 @@
                             <a href="{{ route('customers.index') }}" class="inline-flex items-center px-1 pt-1 text-sm font-medium {{ request()->routeIs('customers.*') ? 'text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400' : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-300 dark:hover:border-gray-600' }}">
                                 Customers
                             </a>
+                            <a href="{{ route('announcements.create') }}" class="block px-3 py-2 rounded-md text-base font-medium {{ request()->routeIs('announcements.*') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800' }}">
+                                Announcement
+                            </a>
                         </div>
                     </div>
 
@@ -67,6 +70,9 @@
                     </a>
                     <a href="{{ route('customers.index') }}" class="block px-3 py-2 rounded-md text-base font-medium {{ request()->routeIs('customers.*') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800' }}">
                         Customers
+                    </a>
+                    <a href="{{ route('announcements.create') }}" class="block px-3 py-2 rounded-md text-base font-medium {{ request()->routeIs('announcements.*') ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800' }}">
+                        Announcement
                     </a>
                 </div>
             </div>

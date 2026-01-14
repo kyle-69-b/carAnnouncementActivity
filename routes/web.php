@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
@@ -17,6 +18,9 @@ Route::resource('cars', CarController::class);
 Route::resource('customers', CustomerController::class);
 Route::post('/cars/{car}/email', [CarEmailController::class, 'send'])
     ->name('cars.email');
+
+Route::get('/announcements', [AnnouncementController::class, 'create'])->name('announcements.create');
+Route::post('/announcements', [AnnouncementController::class, 'store'])->name('announcements.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
